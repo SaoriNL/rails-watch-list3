@@ -3,3 +3,4 @@
   <h1><%= @list.name %></h1>
   <h1><%= @list.id %></h1>
   <%# <h2><%= @movie.title %>
+<%= link_to 'delete this list', list_path(@list), method: :delete, class:'btn btn-primary' %>
