@@ -8,4 +8,5 @@
     <%= movie.overview %>
   <% end %>
   <%# <h2><%= @movie.title %>
+<p><%= link_to 'create a new bookmark', new_list_bookmark_path(@list) %></p>
 <p><%= link_to 'delete this list', list_path(@list), method: :delete, class:'btn btn-primary' %></p>
