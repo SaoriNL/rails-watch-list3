@@ -1,6 +1,12 @@
 <head>
 <%= render 'layouts/navbar' %>
 </head>
+<%= cl_image_tag("bcla1luvhntx6fccy8gj",
+      width: 400, height: 300, crop: :fill) %>
+
+<!-- for face detection -->
+<%= cl_image_tag("kkwlhyh4iskdnphwpdpr",
+      width: 150, height: 150, crop: :thumb, gravity: :face) %>
  <li>
     <%= link_to 'index', root_path, class:"nav-link" %>
   </li>
