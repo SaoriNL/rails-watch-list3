@@ -1,6 +1,12 @@
 <head>
 <%= render 'layouts/navbar' %>
 </head>
+ <li>
+    <%= link_to 'index', root_path, class:"nav-link" %>
+  </li>
+  <li>
+    <%= link_to 'Create a new list', new_list_path, class:"nav-link" %>
+  </li>
 <h1>Movie Lists</h1>
 <div class="row">
     <% @lists.each do |list| %>
