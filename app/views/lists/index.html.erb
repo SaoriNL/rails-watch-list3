@@ -1,18 +1,6 @@
 <head>
 <%= render 'layouts/navbar' %>
 </head>
-<%= cl_image_tag("Blake_fyemzy",
-      width: 400, height: 300, crop: :fill) %>
-
-<!-- for face detection -->
-<%= cl_image_tag("kkwlhyh4iskdnphwpdpr",
-      width: 150, height: 150, crop: :thumb, gravity: :face) %>
- <li>
-    <%= link_to 'index', root_path, class:"nav-link" %>
-  </li>
-  <li>
-    <%= link_to 'Create a new list', new_list_path, class:"nav-link" %>
-  </li>
 <h1>Movie Lists</h1>
 <div class="row">
     <% @lists.each do |list| %>
