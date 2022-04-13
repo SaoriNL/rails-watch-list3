@@ -6,11 +6,10 @@
 
   <%# <h2><%= @movie.title %>
 <%# <%= cl_image_tag @bookmark.photo.key, height: 300, width: 400, crop: :fill %>
-<p><%= link_to 'create a new bookmark', new_list_bookmark_path(@list) %></p>
-<p><%= link_to 'delete this list', list_path(@list), method: :delete, class:'btn btn-primary' %></p>
+
 <% @list.movies.each do |movie| %>
       <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
-      <div class="col-12 col-sm-6 mb-4" data-aos="zoom-in">
+      <div class="col-12 col-sm-6 mb-4 mt-4" data-aos="zoom-in">
         <div class="bg-white rounded shadow h-100">
           <%= image_tag movie.poster_url, alt: movie.title, class: "movie-img rounded-top", height: 200, width: 300 %>
           <div class="p-3 rounded-bottom d-flex flex-column">
@@ -26,3 +25,5 @@
         </div>
       </div>
     <% end %>
+<p><%= link_to 'create a new bookmark', new_list_bookmark_path(@list) %></p>
+<p><%= link_to 'delete this list', list_path(@list), method: :delete, class:'btn btn-primary' %></p>
