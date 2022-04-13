@@ -2,7 +2,7 @@
 <%= render 'layouts/navbar' %>
 </head>
 <h1><%= @list.name %></h1>
-<%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
+<%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill, class:"avatar" %>
 
   <%# <h2><%= @movie.title %>
 <%# <%= cl_image_tag @bookmark.photo.key, height: 300, width: 400, crop: :fill %>
