@@ -1,16 +1,10 @@
 <head>
 <%= render 'layouts/navbar' %>
 </head>
-<h1>Here is a list</h1>
-  <h1><%= @list.name %></h1>
-  <h1><%= @list.id %></h1>
-
-  <% @list.movies.each do |movie| %>
-    <%= movie.title %>
-    <%= movie.overview %>
-  <% end %>
-  <%# <h2><%= @movie.title %>
+<h1><%= @list.name %></h1>
 <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
+
+  <%# <h2><%= @movie.title %>
 <%# <%= cl_image_tag @bookmark.photo.key, height: 300, width: 400, crop: :fill %>
 <p><%= link_to 'create a new bookmark', new_list_bookmark_path(@list) %></p>
 <p><%= link_to 'delete this list', list_path(@list), method: :delete, class:'btn btn-primary' %></p>
