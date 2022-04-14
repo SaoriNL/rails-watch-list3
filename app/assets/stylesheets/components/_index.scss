@@ -3,3 +3,9 @@
 @import "avatar";
 @import "form_legend_clear";
 @import "navbar";
+
+.row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  column-gap: 20px;
+}
